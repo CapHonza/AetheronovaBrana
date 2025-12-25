@@ -1,6 +1,4 @@
-/* ========================
-   ZÁKLADNÍ NASTAVENÍ
-   ======================== */
+/* BASE STYLING */
 * {
     box-sizing: border-box;
     margin: 0; 
@@ -22,9 +20,7 @@ body {
     flex-direction: column;
 }
 
-/* ========================
-   HEADER
-   ======================== */
+/* HEADER */
 header {
     height: 150px; 
     display: flex;
@@ -51,9 +47,7 @@ header h1 {
     box-shadow: 0 0 10px #00d9ff, 0 0 20px #00d9ff;
 }
 
-/* ========================
-   HLAVNÍ KONTEJNER (Drží šířku)
-   ======================== */
+/* MAIN */
 main {
     flex: 1; /* Roztáhne se, aby patička byla dole */
     display: flex;
@@ -63,15 +57,13 @@ main {
 
 .container {
     width: 90%;
-    max-width: 800px; /* Tohle zajistí to zarovnání "roh na roh" */
+    max-width: 800px; /* Tohle zajistí zarovnání "roh na roh" */
     display: flex;
     flex-direction: column;
     gap: 20px; /* Mezera mezi Avatarem a Formulářem */
 }
 
-/* ========================
-   TOPPER (Avatar + Bublina)
-   ======================== */
+/* Topper -> avatar + řeč */
 .topper {
     display: flex;
     align-items: center; /* Svisle na střed */
@@ -122,12 +114,10 @@ main {
     font-size: 14px;
     color: #aaddff;
     line-height: 1.4;
-    font-family: 'Courier New', monospace; /* Techničtější písmo pro řeč */
+    font-family: 'Courier New', monospace; 
 }
 
-/* ========================
-   FORMULÁŘ (Otázky)
-   ======================== */
+/* FORMULÁŘ */
 .quiz-frame {
     background: rgba(0, 10, 20, 0.8);
     border: 1px solid #005f73;
@@ -150,6 +140,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    color: #aaddff;
 }
 
 .option {
@@ -176,9 +168,7 @@ main {
     margin: 20px 0;
 }
 
-/* ========================
-   TLAČÍTKO
-   ======================== */
+/* Button */
 .button-wrapper {
     margin-top: 30px;
     display: flex;
@@ -208,9 +198,7 @@ button:hover {
     box-shadow: 0 0 20px #00d9ff;
 }
 
-/* ========================
-   PATIČKA
-   ======================== */
+/* Footer */
 footer {
     padding: 20px;
     font-size: 12px;
@@ -219,9 +207,7 @@ footer {
     border-top: 1px solid rgba(0, 217, 255, 0.1);
 }
 
-/* ========================
-   MOBILNÍ ÚPRAVY
-   ======================== */
+/* Responsive Exceptions */
 @media (max-width: 600px) {
     .topper {
         flex-direction: column; /* Na mobilu avatar nad textem */
