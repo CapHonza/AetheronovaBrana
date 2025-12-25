@@ -6,14 +6,17 @@
 }
 
 body {
-    background-color: #02050a; 
-    /* FIX POZADÍ:
-       1. min-height zajistí, že se pozadí natáhne, i když je obsah dlouhý.
-       2. fixed zajistí, že gradient drží na místě a scroluje se jen text. */
-    min-height: 100vh; 
-    background-image: radial-gradient(circle at 50% 30%, rgba(0, 140, 255, 0.2), #02050a 65%);
-    background-attachment: fixed;
-    
+    background-image: url('Backgrounds/Background.jpg');
+
+    /* Stejná sada jako u indexu */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;  
+    background-attachment: fixed; 
+
+    min-height: 100vh;
+    margin: 0;
+
     color: #00d9ff;
     font-family: 'Orbitron', sans-serif;
     display: flex;
@@ -22,19 +25,40 @@ body {
 
 /* HEADER */
 header {
-    height: 150px; 
+    height: 200px; 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: relative;
     margin-bottom: 40px;
+    padding: 0 20px;
 }
 
 header h1 {
-    font-size: 50px; /* Na kvíz stačí menší */
-    text-align: center;
-    text-shadow: 0 0 10px #00d9ff;
-    letter-spacing: 2px;
+    font-size: 48px; 
+    text-transform: uppercase; 
+    letter-spacing: 4px; 
+    margin-bottom: 15px; 
+    
+    /* Neonová záře */
+    color: #00d9ff;
+    text-shadow: 
+        0 0 10px rgba(0, 217, 255, 0.8),
+        0 0 20px rgba(0, 217, 255, 0.4);
+}
+
+.subtitle {
+    font-family: 'Courier New', sans-serif;
+    font-size: 18px;
+    font-style: italic; /* Kurzíva pro citát */
+    line-height: 1.5;
+
+    color: #aaddff; 
+    
+    /* Omezení šířky - aby to byl hezký blok textu uprostřed */
+    max-width: 600px;
 }
 
 .tech-line {
@@ -72,7 +96,7 @@ main {
 
 /* Obrázek */
 .avatar-wrapper img {
-    width: 120px; /* Velikost avatara */
+    width: 140px; /* Velikost avatara */
     height: auto;
     border: 2px solid #00d9ff;
     border-radius: 10px;
@@ -106,12 +130,13 @@ main {
 }
 
 .speech-bubble h3 {
+    font-size: 22px;
     margin-bottom: 5px;
     color: #00d9ff; 
 }
 
 .speech-bubble p {
-    font-size: 14px;
+    font-size: 16px;
     color: #aaddff;
     line-height: 1.4;
     font-family: 'Courier New', monospace; 
@@ -209,6 +234,15 @@ footer {
 
 /* Responsive Exceptions */
 @media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+    }
+    
     .topper {
         flex-direction: column; /* Na mobilu avatar nad textem */
         text-align: center;

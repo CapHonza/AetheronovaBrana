@@ -5,11 +5,16 @@
 }
 
 body {
-    background-color: #02050a; 
-    background-image: radial-gradient(circle at 50% 30%, rgba(0, 140, 255, 0.2), #02050a 65%);
+    background-image: url(Backgrounds/Background.jpg); /* 1. Cesta k obrázku */
+    background-repeat: no-repeat; /* 2. Žádné opakování (dlaždice) */
+    background-position: center center; /* 3. Pozice: Střed obrázku bude vždy uprostřed monitoru */
+    background-size: cover; /* 4. Roztáhne obrázek přes celou plochu bez deformace */
+    background-attachment: fixed; /* 5. FIXOVÁNÍ: Obrázek stojí na místě, text roluje přes něj */
+    
     color: #00d9ff;
     font-family: 'Orbitron', sans-serif;
     height: 100vh;
+    margin: 0;
    
     display: flex;
     flex-direction: column;
