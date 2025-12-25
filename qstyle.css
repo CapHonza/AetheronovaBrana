@@ -251,7 +251,7 @@ footer {
     .speech-bubble::before {
         /* Změna šipky, aby ukazovala nahoru k avatarovi */
         left: 50%;
-        top: -10px;
+        top: -15px;
         transform: translateX(-50%) rotate(90deg);
     }
 }
