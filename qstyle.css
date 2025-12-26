@@ -17,8 +17,8 @@ body {
     min-height: 100vh;
     margin: 0;
 
-    color: #00d9ff;
-    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-blue);
+    font-family: var(--font-main);
     display: flex;
     flex-direction: column;
 }
@@ -43,20 +43,20 @@ header h1 {
     margin-bottom: 15px;
 
     /* Neonová záře */
-    color: #00d9ff;
+    color: var(--neon-blue);
     text-shadow:
         0 0 10px rgba(0, 217, 255, 0.8),
         0 0 20px rgba(0, 217, 255, 0.4);
 }
 
 .subtitle {
-    font-family: 'Courier New', sans-serif;
+    font-family: var(--font-story);
     font-size: 18px;
     font-style: italic;
     /* Kurzíva pro citát */
     line-height: 1.5;
 
-    color: #aaddff;
+    color: var(--text-light);
 
     /* Omezení šířky - aby to byl hezký blok textu uprostřed */
     max-width: 600px;
@@ -68,8 +68,8 @@ header h1 {
     left: 0;
     height: 2px;
     width: 100%;
-    background-color: #00d9ff;
-    box-shadow: 0 0 10px #00d9ff, 0 0 20px #00d9ff;
+    background-color: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
 }
 
 /* MAIN */
@@ -106,7 +106,7 @@ main {
     width: 140px;
     /* Velikost avatara */
     height: auto;
-    border: 2px solid #00d9ff;
+    border: 2px solid var(--neon-blue);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
     background: #000;
@@ -117,7 +117,7 @@ main {
     position: relative;
     background: rgba(0, 20, 40, 0.8);
     /* Poloprůhledná tmavá */
-    border: 1px solid #00d9ff;
+    border: 1px solid var(--neon-blue);
     padding: 20px;
     border-radius: 10px;
     flex: 1;
@@ -137,26 +137,26 @@ main {
     /* Vytvoření trojúhelníku pomocí borderů */
     border-width: 10px 10px 10px 0;
     border-style: solid;
-    border-color: transparent #00d9ff transparent transparent;
+    border-color: transparent var(--neon-blue) transparent transparent;
 }
 
 .speech-bubble h3 {
     font-size: 22px;
     margin-bottom: 5px;
-    color: #00d9ff;
+    color: var(--neon-blue);
 }
 
 .speech-bubble p {
     font-size: 16px;
-    color: #aaddff;
+    color: var(--text-light);
     line-height: 1.4;
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-story);
 }
 
 /* FORMULÁŘ */
 .quiz-frame {
     background: rgba(0, 10, 20, 0.8);
-    border: 1px solid #005f73;
+    border: 1px solid var(--dark-teal);
     padding: 30px;
     border-radius: 10px;
 }
@@ -168,7 +168,7 @@ main {
 .question-block h4 {
     margin-bottom: 15px;
     font-size: 18px;
-    color: #00d9ff;
+    color: var(--neon-blue);
 }
 
 /* Stylování možností */
@@ -177,7 +177,7 @@ main {
     flex-direction: column;
     gap: 10px;
 
-    color: #aaddff;
+    color: var(--text-light);
 }
 
 /* TEXT OPTIONS */
@@ -188,11 +188,11 @@ main {
 
     background: rgba(0, 10, 20, 0.5);
     /* Trochu tmavší pozadí pro čitelnost */
-    border: 2px solid #005f73;
+    border: 2px solid var(--dark-teal);
     border-radius: 5px;
 
-    color: #00d9ff;
-    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-blue);
+    font-family: var(--font-main);
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
@@ -204,7 +204,7 @@ main {
 
 .text-option:focus,
 .text-option:not(:placeholder-shown) {
-    border-color: #00d9ff;
+    border-color: var(--neon-blue);
     /* Rámeček se rozsvítí */
     box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
     /* Přidáme záři */
@@ -227,7 +227,7 @@ input[type="radio"] {
     margin: 0;
     width: 18px;
     height: 18px;
-    border: 2px solid #005f73;
+    border: 2px solid var(--dark-teal);
     /* Tmavě modrý okraj */
     border-radius: 50%;
 
@@ -248,15 +248,15 @@ input[type="radio"]::before {
     transform: scale(0);
     /* Zmenšená na nulu (není vidět) */
     transition: 0.2s transform ease-in-out;
-    background-color: #00d9ff;
+    background-color: var(--neon-blue);
     /* Barva tečky */
-    box-shadow: 0 0 5px #00d9ff;
+    box-shadow: 0 0 5px var(--neon-blue);
     /* Záře tečky */
 }
 
 /* Stav ZAŠKRTNUTO (CHECKED) */
 input[type="radio"]:checked {
-    border-color: #00d9ff;
+    border-color: var(--neon-blue);
     /* Rámeček se rozsvítí */
     box-shadow: 0 0 10px rgba(0, 217, 255, 0.4);
     /* Záře celého kroužku */
@@ -281,13 +281,13 @@ input[type="radio"]:checked::before {
 
 .option:hover {
     background: rgba(0, 217, 255, 0.1);
-    border-color: #005f73;
+    border-color: var(--dark-teal);
 }
 
 .option:has(input:checked) {
     background: rgba(0, 217, 255, 0.2);
     /* Výraznější pozadí */
-    border-color: #00d9ff;
+    border-color: var(--neon-blue);
     /* Svítící rámeček */
     box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
     /* Jemná záře */
@@ -322,11 +322,11 @@ button {
     /* Ale na PC nebude větší než 300px */
 
     background: transparent;
-    border: 2px solid #00d9ff;
+    border: 2px solid var(--neon-blue);
     /* Tlustší rámeček */
     border-radius: 5px;
-    color: #00d9ff;
-    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-blue);
+    font-family: var(--font-main);
     font-size: 18px;
     cursor: pointer;
     font-weight: bold;
@@ -336,16 +336,16 @@ button {
 }
 
 button:hover {
-    background: #00d9ff;
+    background: var(--neon-blue);
     color: #000;
-    box-shadow: 0 0 20px #00d9ff;
+    box-shadow: 0 0 20px var(--neon-blue);
 }
 
 /* Footer */
 footer {
     padding: 20px;
     font-size: 12px;
-    color: #4a6fa5;
+    color: var(--text-muted);
     text-align: center;
     border-top: 1px solid rgba(0, 217, 255, 0.1);
 }
@@ -358,7 +358,7 @@ footer {
 }
 
 .author-link:hover {
-    color: #00d9ff;
+    color: var(--neon-blue);
     text-shadow: 0 0 8px rgba(0, 217, 255, 0.6);
     /* Přidání záře */
     cursor: pointer;
@@ -398,7 +398,7 @@ footer {
 /* Vzhled obdélníku */
 .overlay-box {
     background-color: rgba(10, 15, 30, 0.95);
-    border: 2px solid #00d9ff;
+    border: 2px solid var(--neon-blue);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
     color: white;
@@ -415,40 +415,40 @@ footer {
 
 /* Styly pro ÚSPĚCH (přidá JS) */
 .overlay-box.win {
-    border-color: #00ffcc;
+    border-color: var(--neon-green);
     /* Neonová tyrkysová */
     box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
 }
 
 .overlay-box.win h2 {
-    color: #00ffcc;
+    color: var(--neon-green);
     text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
 }
 
 .overlay-box.win .close-btn:hover {
-    background-color: tgba(0, 255, 204, 0.1);
-    box-shadow: 0 0 15px #00ffcc;
-    border-color: #00ffcc;
-    color: #00ffcc;
+    background-color: rgba(0, 255, 204, 0.1);
+    box-shadow: 0 0 15px var(--neon-green);
+    border-color: var(--neon-green);
+    color: var(--neon-green);
 }
 
 /* Styly pro NEÚSPĚCH (přidá JS) */
 .overlay-box.lose {
-    border-color: #ff3333;
+    border-color: var(--neon-red);
     /* Neonová červená */
     box-shadow: 0 0 20px rgba(255, 51, 51, 0.3);
 }
 
 .overlay-box.lose h2 {
-    color: #ff3333;
+    color: var(--neon-red);
     text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
 }
 
 .overlay-box.lose .close-btn:hover {
     background-color: rgba(255, 51, 51, 0.1);
-    box-shadow: 0 0 15px #ff3333;
-    border-color: #ff3333;
-    color: #ff3333;
+    box-shadow: 0 0 15px var(--neon-red);
+    border-color: var(--neon-red);
+    color: var(--neon-red);
 }
 
 /* Tlačítka */
@@ -492,16 +492,16 @@ footer {
 
 /* Tlačítko K BRÁNĚ */
 .home-btn {
-    border: 2px solid #00d9ff;
+    border: 2px solid var(--neon-blue);
     /* Tlustší rámeček */
     border-radius: 5px;
-    color: #00d9ff;
+    color: var(--neon-blue);
 }
 
 .home-btn:hover {
     color: #000;
-    background: #00d9ff;
-    box-shadow: 0 0 20px #00d9ff;
+    background: var(--neon-blue);
+    box-shadow: 0 0 20px var(--neon-blue);
 }
 
 /* Responsive Exceptions */

@@ -1,0 +1,27 @@
+:root {
+    /* --- HLAVNÍ BARVY --- */
+    --neon-blue: #00d9ff;        /* Hlavní barva (nadpisy, čáry, aktivní prvky) */
+    --neon-green: #00ffcc;       /* Úspěch (Win) */
+    --neon-red: #ff3333;         /* Chyba (Lose/Error) */
+    
+    --dark-teal: #005f73;        /* Tmavší modrá (rámečky, inputy) */
+    
+    /* --- TEXTY --- */
+    --text-light: #aaddff;       /* Světle modrá (odstavce, popisky) */
+    --text-muted: #4a6fa5;       /* Tmavší/šedá (footer, poznámky) */
+    --text-white: #ffffff;       /* Čistá bílá (pro kontrast) */
+
+    /* --- POZADÍ (Backgrounds) --- */
+    --bg-dark: #02050a;          /* Téměř černá (scrollbar track) */
+    --bg-panel: rgba(0, 10, 20, 0.9); /* Panel terminálu/kvízu (neprůhledný) */
+    --bg-glass: rgba(0, 20, 40, 0.6); /* Průhlednější sklo (inputy) */
+    --bg-overlay: rgba(0, 0, 0, 0.5); /* Ztmavení celé obrazovky */
+
+    /* --- FONTY --- */
+    --font-main: 'Orbitron', sans-serif;      /* Nadpisy, UI */
+    --font-story: 'Courier New', monospace;   /* Příběh, terminál */
+
+    /* --- STÍNY A ZÁŘE --- */
+    --glow-blue: 0 0 10px rgba(0, 217, 255, 0.6);
+    --glow-strong: 0 0 20px var(--neon-blue);
+}
