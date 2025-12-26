@@ -1,7 +1,7 @@
 /* BASE STYLING */
 * {
     box-sizing: border-box;
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
@@ -11,8 +11,8 @@ body {
     /* Stejná sada jako u indexu */
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;  
-    background-attachment: fixed; 
+    background-size: cover;
+    background-attachment: fixed;
 
     min-height: 100vh;
     margin: 0;
@@ -25,7 +25,7 @@ body {
 
 /* HEADER */
 header {
-    height: 200px; 
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,14 +37,14 @@ header {
 }
 
 header h1 {
-    font-size: 48px; 
-    text-transform: uppercase; 
-    letter-spacing: 4px; 
-    margin-bottom: 15px; 
-    
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+
     /* Neonová záře */
     color: #00d9ff;
-    text-shadow: 
+    text-shadow:
         0 0 10px rgba(0, 217, 255, 0.8),
         0 0 20px rgba(0, 217, 255, 0.4);
 }
@@ -52,11 +52,12 @@ header h1 {
 .subtitle {
     font-family: 'Courier New', sans-serif;
     font-size: 18px;
-    font-style: italic; /* Kurzíva pro citát */
+    font-style: italic;
+    /* Kurzíva pro citát */
     line-height: 1.5;
 
-    color: #aaddff; 
-    
+    color: #aaddff;
+
     /* Omezení šířky - aby to byl hezký blok textu uprostřed */
     max-width: 600px;
 }
@@ -73,30 +74,37 @@ header h1 {
 
 /* MAIN */
 main {
-    flex: 1; /* Roztáhne se, aby patička byla dole */
+    flex: 1;
+    /* Roztáhne se, aby patička byla dole */
     display: flex;
-    justify-content: center; /* Všechno na střed */
+    justify-content: center;
+    /* Všechno na střed */
     padding-bottom: 50px;
 }
 
 .container {
     width: 90%;
-    max-width: 800px; /* Tohle zajistí zarovnání "roh na roh" */
+    max-width: 800px;
+    /* Tohle zajistí zarovnání "roh na roh" */
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Mezera mezi Avatarem a Formulářem */
+    gap: 20px;
+    /* Mezera mezi Avatarem a Formulářem */
 }
 
 /* Topper -> avatar + řeč */
 .topper {
     display: flex;
-    align-items: center; /* Svisle na střed */
-    gap: 20px; /* Mezera mezi obrázkem a textem */
+    align-items: center;
+    /* Svisle na střed */
+    gap: 20px;
+    /* Mezera mezi obrázkem a textem */
 }
 
 /* Obrázek */
 .avatar-wrapper img {
-    width: 140px; /* Velikost avatara */
+    width: 140px;
+    /* Velikost avatara */
     height: auto;
     border: 2px solid #00d9ff;
     border-radius: 10px;
@@ -107,11 +115,13 @@ main {
 /* Bublina s textem */
 .speech-bubble {
     position: relative;
-    background: rgba(0, 20, 40, 0.8); /* Poloprůhledná tmavá */
+    background: rgba(0, 20, 40, 0.8);
+    /* Poloprůhledná tmavá */
     border: 1px solid #00d9ff;
     padding: 20px;
     border-radius: 10px;
-    flex: 1; /* Zabere zbytek místa vedle obrázku */
+    flex: 1;
+    /* Zabere zbytek místa vedle obrázku */
     box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
 }
 
@@ -119,10 +129,11 @@ main {
 .speech-bubble::before {
     content: '';
     position: absolute;
-    left: -10px; /* Posun doleva mimo bublinu */
+    left: -10px;
+    /* Posun doleva mimo bublinu */
     top: 50%;
     transform: translateY(-50%);
-    
+
     /* Vytvoření trojúhelníku pomocí borderů */
     border-width: 10px 10px 10px 0;
     border-style: solid;
@@ -132,14 +143,14 @@ main {
 .speech-bubble h3 {
     font-size: 22px;
     margin-bottom: 5px;
-    color: #00d9ff; 
+    color: #00d9ff;
 }
 
 .speech-bubble p {
     font-size: 16px;
     color: #aaddff;
     line-height: 1.4;
-    font-family: 'Courier New', monospace; 
+    font-family: 'Courier New', monospace;
 }
 
 /* FORMULÁŘ */
@@ -169,20 +180,122 @@ main {
     color: #aaddff;
 }
 
+/* TEXT OPTIONS */
+.text-option {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+
+    background: rgba(0, 10, 20, 0.5);
+    /* Trochu tmavší pozadí pro čitelnost */
+    border: 2px solid #005f73;
+    border-radius: 5px;
+
+    color: #00d9ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+.text-option:focus,
+.text-option:not(:placeholder-shown) {
+    border-color: #00d9ff;
+    /* Rámeček se rozsvítí */
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+    /* Přidáme záři */
+    background: rgba(0, 20, 40, 0.8);
+}
+
+.text-place {
+    padding: 10px;
+}
+
+/* RADIO BUTTONS */
+/* Vytvoření vlastního kroužku */
+input[type="radio"] {
+    /* Vypnutí defaultního nastavení tlačítek prohlížeče */
+    -webkit-appearance: none;
+    appearance: none;
+    /* Přebarvení prohlížečového/systémového kroužku u radio typů */
+    background-color: transparent;
+    /* Průhledný střed */
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #005f73;
+    /* Tmavě modrý okraj */
+    border-radius: 50%;
+
+    /* Flexbox pro zarovnání tečky uvnitř */
+    display: grid;
+    place-content: center;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Vytvoření tečky uvnitř */
+input[type="radio"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: scale(0);
+    /* Zmenšená na nulu (není vidět) */
+    transition: 0.2s transform ease-in-out;
+    background-color: #00d9ff;
+    /* Barva tečky */
+    box-shadow: 0 0 5px #00d9ff;
+    /* Záře tečky */
+}
+
+/* Stav ZAŠKRTNUTO (CHECKED) */
+input[type="radio"]:checked {
+    border-color: #00d9ff;
+    /* Rámeček se rozsvítí */
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.4);
+    /* Záře celého kroužku */
+}
+
+/* Když je zaškrtnuto, tak se tečka uvnitř zvětší */
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
 .option {
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    padding: 10px;
-    border: 1px solid transparent; /* Průhledný rámeček, aby nic neposkakovalo při hoveru */
-    transition: 0.2s;
-    border-radius: 5px;
+    padding: 12px;
+
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+    border-radius: 8px;
 }
 
 .option:hover {
     background: rgba(0, 217, 255, 0.1);
     border-color: #005f73;
+}
+
+.option:has(input:checked) {
+    background: rgba(0, 217, 255, 0.2);
+    /* Výraznější pozadí */
+    border-color: #00d9ff;
+    /* Svítící rámeček */
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
+    /* Jemná záře */
+}
+
+.option:has(input:checked) span {
+    color: #fff;
+    /* Text zbělá pro lepší kontrast */
 }
 
 /* Oddělovací čára */
@@ -201,12 +314,17 @@ main {
 }
 
 button {
-    padding: 15px 40px; /* Větší padding */
-    width: 100%; /* Roztáhneme ho na mobilu */
-    max-width: 300px; /* Ale na PC nebude větší než 300px */
-    
+    padding: 15px 40px;
+    /* Větší padding */
+    width: 100%;
+    /* Roztáhneme ho na mobilu */
+    max-width: 300px;
+    /* Ale na PC nebude větší než 300px */
+
     background: transparent;
-    border: 2px solid #00d9ff; /* Tlustší rámeček */
+    border: 2px solid #00d9ff;
+    /* Tlustší rámeček */
+    border-radius: 5px;
     color: #00d9ff;
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
@@ -232,22 +350,36 @@ footer {
     border-top: 1px solid rgba(0, 217, 255, 0.1);
 }
 
+.author-link {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.author-link:hover {
+    color: #00d9ff;
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.6); /* Přidání záře */
+    cursor: pointer;
+}
+
 /* Responsive Exceptions */
 @media (max-width: 600px) {
     header h1 {
         font-size: 32px;
         letter-spacing: 2px;
     }
-    
+
     .subtitle {
         font-size: 14px;
     }
-    
+
     .topper {
-        flex-direction: column; /* Na mobilu avatar nad textem */
+        flex-direction: column;
+        /* Na mobilu avatar nad textem */
         text-align: center;
     }
-    
+
     .speech-bubble::before {
         /* Změna šipky, aby ukazovala nahoru k avatarovi */
         left: 50%;

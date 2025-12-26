@@ -35,62 +35,80 @@
                 <div class="speech-bubble">
                     <h3>Vítej, Poutníku.</h3>
                     <p>
-                        Archiv není pro zvědavé, ale pro vědoucí. Mnozí se ztratili v ozvěnách dat, když hledali odpovědi
+                        Archiv není pro zvědavé, ale pro vědoucí. Mnozí se ztratili v ozvěnách dat, když hledali
+                        odpovědi
                         na špatné otázky. Dokaž, že tvá mysl je připravena na to, co se skrývá za oponou.
                     </p>
                 </div>
             </div>
 
             <form class="quiz-frame">
-
+                <!-- Placeholder je zde kvůli tomu, aby CSS poznalo, že je v inputu už něco napsané (efekt svítivosti plného/prázdného inputu)-->
                 <div class="question-block">
-                    <h4>1. Kdo je stvořitelem Aetheronu?</h4>
+                    <h4>1. Jsem tvá nestálá paměť. Uchovávám celý svět, dokud proudí energie. Jakmile nastane tma,
+                        zapomenu vše, co jsem věděl. Zadej mou třípísmennou zkratku.</h4>
                     <div class="options">
-                        <label class="option"><input type="radio" name="q1" value="a"> <span>Profesor X</span></label>
-                        <label class="option"><input type="radio" name="q1" value="b"> <span>Dr. Aetheron</span></label>
-                        <label class="option"><input type="radio" name="q1" value="c"> <span>Neznámý</span></label>
+                        <label class="text-place"><input type="text" name="q1" placeholder=" "
+                                class="text-option"></label>
                     </div>
                 </div>
 
                 <hr class="separator">
 
                 <div class="question-block">
-                    <h4>2. Jakou barvu má jádro?</h4>
+                    <h4>2. V mém světě existují pouze dva stavy: 1 a 0. Bytí a Nebytí. Všechno vědění je postaveno z
+                        jejich nekonečných kombinací. Jak se nazývá tento základní jazyk?</h4>
                     <div class="options">
-                        <label class="option"><input type="radio" name="q2" value="a"> <span>Červenou</span></label>
-                        <label class="option"><input type="radio" name="q2" value="b"> <span>Modrou</span></label>
+                        <label class="option"><input type="radio" name="q2" value="a">
+                            <span>Morseova šifra</span></label>
+                        <label class="option"><input type="radio" name="q2" value="b">
+                            <span>Binární soustava</span></label>
+                        <label class="option"><input type="radio" name="q2" value="c">
+                            <span>Hexadecimální kód</span></label>
                     </div>
                 </div>
 
                 <hr class="separator">
 
                 <div class="question-block">
-                    <h4>3. Kde se nachází brána?</h4>
+                    <h4>3. Jsem kostra bez kůže. Definuji strukturu a význam, ale ne vzhled. Beze mě je web jen
+                        chaotický text bez řádu. Který jazyk jsem?</h4>
                     <div class="options">
-                        <label class="option"><input type="radio" name="q3" value="a"> <span>V Praze</span></label>
-                        <label class="option"><input type="radio" name="q3" value="b"> <span>Na Marsu</span></label>
+                        <label class="option"><input type="radio" name="q3" value="a">
+                            <span>HTML</span></label>
+                        <label class="option"><input type="radio" name="q3" value="b">
+                            <span>CSS</span></label>
+                        <label class="option"><input type="radio" name="q3" value="c">
+                            <span>JavaScript</span></label>
                     </div>
                 </div>
 
                 <hr class="separator">
 
                 <div class="question-block">
-                    <h4>4. Kde se nachází brána?</h4>
+                    <h4>4. Jeden Byte je nádoba. Aby se naplnila, potřebuje menší střípky dat. Kolik Bitů musíš spojit,
+                        abys stvořil jeden celistvý Byte?</h4>
                     <div class="options">
-                        <label class="option"><input type="radio" name="q3" value="a"> <span>V Praze</span></label>
-                        <label class="option"><input type="radio" name="q3" value="b"> <span>Na Marsu</span></label>
+                        <label class="option"><input type="radio" name="q4" value="a">
+                            <span>4</span></label>
+                        <label class="option"><input type="radio" name="q4" value="b">
+                            <span>8</span></label>
+                        <label class="option"><input type="radio" name="q4" value="c">
+                            <span>16</span></label>
                     </div>
                 </div>
 
                 <hr class="separator">
 
                 <div class="question-block">
-                    <h4>5. Kde se nachází brána?</h4>
+                    <h4>5. Jsem všude kolem tebe v tomto prázdnu. Čím více mě je, tím méně vidíš. Co jsem?</h4>
                     <div class="options">
-                        <label class="option"><input type="radio" name="q3" value="a"> <span>V Praze</span></label>
-                        <label class="option"><input type="radio" name="q3" value="b"> <span>Na Marsu</span></label>
+                        <label class="text-place"><input type="text" name="q5" placeholder=" "
+                                class="text-option"></label>
                     </div>
                 </div>
+
+                <hr class="separator">
 
                 <div class="button-wrapper">
                     <button type="button" id="submit-quiz">OVĚŘIT PŘÍSTUP</button>
@@ -101,7 +119,7 @@
     </main>
 
     <footer>
-        &copy; Jan Čáp | 2025 | Univerzita Karlova
+        &copy; <a href="https://caphonza.github.io/PersonalPortfolio/" target="_blank" class="author-link">Jan Čáp</a> | 2025 | Univerzita Karlova
     </footer>
 
     <script src="script.js"></script>
