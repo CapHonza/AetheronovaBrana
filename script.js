@@ -1,5 +1,5 @@
 /* =========================================
-   ČÁST 1: HLAVNÍ BRÁNA (Index.html)
+    ČÁST 1: HLAVNÍ BRÁNA (Index.html)
    ========================================= */
 
 // Hodiny na index.html
@@ -55,7 +55,7 @@ if (tlacitkoBrana) {
 }
 
 /* =========================================
-   ČÁST 2: ZKOUŠKA (Quiz.html)
+    ČÁST 2: ZKOUŠKA (Quiz.html)
    ========================================= */
 
 // Vyhodnocování kvízu na quiz.html

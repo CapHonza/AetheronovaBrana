@@ -1,0 +1,426 @@
+/* BASE STYLING */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('Backgrounds/Background.jpg');
+
+    /* Stejná sada jako u indexu */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    margin: 0;
+
+    color: var(--neon-blue);
+    font-family: var(--font-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Okno držící všechen obsah */
+.window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 95%;
+
+    background: var(--bg-panel);
+    border: 1px solid var(--neon-blue);
+    border-radius: 5px;
+
+    margin: 30px 0;
+}
+
+/* HEADERY */
+header {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.top-header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+    gap: 20px;
+
+    border-bottom: 1px solid var(--neon-blue);
+}
+
+.top-header h1 {
+    font-size: 90px;
+    text-align: center;
+
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.header-desc {
+    font-family: var(--font-story);
+    font-size: 17px;
+    font-style: italic;
+    /* Kurzíva pro citát */
+    line-height: 1.5;
+
+    color: var(--text-light);
+
+    /* Omezení šířky - aby to byl hezký blok textu uprostřed */
+    max-width: 900px;
+    text-align: center;
+}
+
+.bottom-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    padding: 20px 5% 20px 2%;
+    gap: 40px;
+    font-size: 25px;
+
+    border-bottom: 1px solid var(--neon-blue);
+}
+
+.system span {
+    color: #00ff00;
+}
+
+.vertical-slash {
+    height: 30px;
+    width: 3px;
+    background-color: var(--neon-blue);
+
+    /* Záře až přes postavu */
+    box-shadow:
+        0 0 10px var(--neon-blue),
+        0 0 20px var(--neon-blue);
+
+    z-index: 10;
+    opacity: 0.7;
+}
+
+.clock {
+    margin-left: auto;
+}
+
+/* Obrázek */
+.avatar-wrapper img {
+    width: 90px;
+    /* Velikost avatara */
+    height: auto;
+    border: 1px solid var(--neon-blue);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* MAIN CONTENT */
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--neon-blue);
+
+    height: 80vh;
+    overflow: hidden;
+}
+
+aside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 90px;
+    align-content: start;
+    gap: 0;
+
+    width: 300px;
+    border-right: 1px solid var(--neon-blue);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+}
+
+/* Čtecí zóna */
+.reading-area {
+    text-align: center;
+    hyphens: auto;
+    border-bottom: 1px solid var(--neon-blue);
+    padding: 10px;
+    overflow-y: auto;
+    flex: 1;
+    font-family: var(--font-story);
+
+    scrollbar-color: var(--neon-blue) transparent;
+    scrollbar-width: thin
+}
+
+.reading-area.story-mode {
+    text-align: justify;
+    padding: 30px;
+}
+
+.reading-area h3 {
+    text-align: center;
+    font-family: var(--font-main);
+    color: var(--neon-blue);
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    margin: 0 auto;
+
+    line-height: 2;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: var(--font-main);
+}
+
+/* Interaktivní zóna */
+.interactive-area {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 15px 20px;
+    margin-top: 0;
+    background: rgba(0, 10, 20, 0.3);
+}
+
+.interactive-area h3 {
+    padding: 0 0 5px 0;
+    margin: 0;
+    font-size: 1.1rem;
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.interactive-area p {
+    padding: 0 0 15px 0;
+    margin: 0;
+    font-style: italic;
+    font-family: var(--font-story);
+    font-size: 0.9rem;
+    max-width: 800px;
+}
+
+input {
+    padding: 8px;
+    width: 100%;
+    max-width: 250px;
+
+    background: rgba(0, 10, 20, 0.5);
+    /* Trochu tmavší pozadí pro čitelnost */
+    border: 1px solid var(--dark-teal);
+    border-radius: 3px;
+
+    color: var(--neon-blue);
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+    border-color: var(--neon-blue);
+    /* Rámeček se rozsvítí */
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+    /* Přidáme záři */
+    background: rgba(0, 20, 40, 0.8);
+}
+
+.response {
+    min-height: 24px;
+}
+
+/* Buttons */
+aside button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 1px solid var(--dark-teal);
+    line-height: 1.4;
+    transition: 0.5s;
+}
+
+.interactive-area button {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 150px;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--dark-teal);
+    color: var(--neon-blue);
+    font-family: var(--font-main);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    /* Plynulá změna barvy */
+}
+
+button:hover {
+    background: var(--neon-blue);
+    color: black;
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* Třídy tlačítek pro JS */
+.active-record {
+    /* Aktivní tlačítko */
+    background: var(--neon-blue) !important;
+    color: black !important;
+    box-shadow: 0 0 20px var(--neon-blue);
+    border-color: white;
+}
+
+.locked-record {
+    /* Zamčené tlačítko */
+    opacity: 0.3;
+    pointer-events: none;
+    /* Na tohle tlačítko nepůjde kliknout */
+    cursor: not-allowed;
+}
+
+.hidden {
+    /* Třída pro schování prvků */
+    display: none !important;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.author-link {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.author-link:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.6);
+    /* Přidání záře */
+    cursor: pointer;
+}
+
+/* Změna textu */
+.mpanel {
+    display: none;
+}
+
+.panel-instruction {
+    display: block;
+    line-height: 1.2;
+    font-size: 32px;
+}
+
+/* Responsive Exceptions */
+@media (max-width: 768px) {
+    .top-header h1 {
+        font-size: 40px;
+    }
+
+    .bottom-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .vertical-slash {
+        display: none;
+    }
+
+    .clock {
+        margin: 0;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden; /* Zakazuje svislí scroll */
+        white-space: nowrap; /* Zabraňuje lámání tlačítek pod sbe */
+
+        border-right: none;
+        border-bottom: 1px solid var(--neon-blue);
+
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    aside button {
+        flex: 0 0 140px; /* Fixní šířka 140px */
+        height: 70px;
+        border-bottom: none;
+        border-right: 1px solid var(--dark-teal);
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    main {
+        height: 70vh;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        line-height: 3.5;
+        text-align: center;
+    }
+
+    .dpanel {display: none;}
+    .mpanel {display: inline;}
+}

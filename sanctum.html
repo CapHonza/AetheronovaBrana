@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archiv</title>
+    <title>Svatyně Vědění</title>
     <meta name="robots" content="noindex, nofollow">
     <!-- Socials -->
     <meta property="og:title" content="Přístup Omezen | Aetheronova Brána">
@@ -23,7 +23,81 @@
 </head>
 
 <body>
+    <div class="window">
+        <header>
+            <div class="top-header">
+                <h1>Svatyně Vědění</h1>
+                <p class="header-desc">
+                    Vítej na Druhém břehu...
+                    <br>
+                    Překročení Horizontu proběhlo úspěšně. Nyní se nacházíš ve Svatyni Vědění, v archivu, který
+                    existuje
+                    mimo běžný časoprostor. Zde jsou uloženy fragmenty mé práce a střípky pravdy o tom, co se stalo
+                    s
+                    naším světem.
+                </p>
+            </div>
+            <div class="bottom-header">
+                <div class="avatar-wrapper">
+                    <img src="Obrazky/Aetheron2.png" alt="Aetheron Avatar">
+                </div>
+                <p class="system">SYSTEM: <span class="green-text">ONLINE</span></p>
+                <div class="vertical-slash"></div>
+                <p class="user">UŽIVATEL: Poutník</p>
+                <div class="clock">0:00:00</div>
+            </div>
+        </header>
+        <div class="content-wrapper">
+            <aside>
+                <button id="record-001">
+                    <h3>ZÁZNAM 001:</h3>
+                    <p>Ticho po Ruptuře</p>
+                </button>
+                <button id="record-002" class="locked-record">
+                    <h3>ZÁZNAM 002:</h3>
+                    <p>Název zánamu</p>
+                </button>
+                <button id="record-003" class="locked-record"">
+                    <h3>ZÁZNAM 003:</h3>
+                    <p>Název záznamu</p>
+                </button>
+            </aside>
+            <main>
+                <div class="reading-area" id="story-display">
+                    <!-- Nadpis je zatím informační, později odstranit a pro školní verzy vyměnit za poznám a přesměrování na web -->
+                    <h2>POZOR: WEB ZATÍM NENÍ DOKONČEN !!! -> TOTO JE ZATÍM VERZE ULOŽENÁ NA GITHUBU PRO PŘÍPAD ZTRÁTY DAT</h2>
+                    <p class="subtitle">
+                        SYSTÉM INICIALIZOVÁN...<br>
+                        ČEKÁM NA VÝBĚR DATA-SEKTORU.<br>
+                        <span class="panel-instruction"></span>
+                            PRO POKRAČOVÁNÍ ZVOLTE DOSTUPNÝ ZÁZNAM V 
+                            <span class="dpanel">LEVÉM PANELU.</span>
+                            <span class="mpanel">HORNÍM PANELU</span>
+                        </span>
+                    </p>
+                </div>
+                <div class="interactive-area">
+                    <h3 id="task-title">Zkouška Vnímání</h3>
+                    <p id="task-desc">
+                        Najdi v textu odkaz, který ti přenese na externí web. Zde musíš najít hlavní logo a napsat jeho
+                        název jako odpověď.
+                    </p>
+                    <p id="response"></p>
+                    <input type="text" id="challenge-input" placeholder="odpověď">
+                    <button id="submit-btn">
+                        ODEMKNOUT
+                    </button>
+                </div>
+            </main>
+        </div>
+        <footer>
+            &copy; <a href="https://caphonza.github.io/PersonalPortfolio/" target="_blank" class="author-link">Jan
+                Čáp</a> |
+            2025 | Univerzita Karlova
+        </footer>
+    </div>
 
+    <script src="sanctum.js"></script>
 </body>
 
 </html>

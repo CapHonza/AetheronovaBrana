@@ -22,7 +22,7 @@ REAKCE NA KVÍZ (Trial.html - Po vyhodnocení)
         Nezoufej, Poutníku. Čas je zde relativní. Zklidni svou mysl, přeformátuj své odpovědi a pokus se o synchronizaci znovu.
 
 UVÍTÁNÍ VE SVATYNI (Sanctum.html - Po přihlášení)
-    Tohle je první věc, kterou uvidí po zadání hesla OMEGA. Mělo by to vypadat jako otevření starého deníku nebo terminálu.
+    Tohle je první věc, kterou uvidí po zadání hesla ANDROMEDA. Mělo by to vypadat jako otevření starého deníku nebo terminálu.
 
     Záhlaví stránky:
 
@@ -32,4 +32,4 @@ UVÍTÁNÍ VE SVATYNI (Sanctum.html - Po přihlášení)
 
         „Vítej na Druhém břehu.
 
-        Překročení Horizontu proběhlo úspěšně. Nyní se nacházíš v Nexu, v archivu, který existuje mimo běžný časoprostor. Zde jsou uloženy fragmenty mé práce a střípky pravdy o tom, co se stalo s naším světem.“
+        Překročení Horizontu proběhlo úspěšně. Nyní se nacházíš ve Svatyni Vědění, v archivu, který existuje mimo běžný časoprostor. Zde jsou uloženy fragmenty mé práce a střípky pravdy o tom, co se stalo s naším světem.“
