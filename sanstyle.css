@@ -8,8 +8,6 @@
 html, body {
     height: 100%;
     width: 100%;
-    background: radial-gradient(circle at center, #050b18 0%, #02050a 100%);
-    background-attachment: fixed;
     background-color: #02050a;
     overflow-x: hidden;
 }
@@ -22,6 +20,8 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+
+    background-color: #02050a;
 
     min-height: 100vh;
     margin: 0;

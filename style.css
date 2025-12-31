@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    background-color: #02050a;
+} 
+
 body {
     background-image: url(Backgrounds/Background.jpg);
     /* 1. Cesta k obrázku */
