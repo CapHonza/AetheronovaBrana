@@ -5,6 +5,13 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
 body {
     background-image: url('Backgrounds/Background.jpg');
 
@@ -413,6 +420,7 @@ footer {
 
     main {
         height: 70vh;
+        min-height: 200px;
     }
 
     .subtitle {
