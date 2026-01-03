@@ -31,7 +31,7 @@ const tlacitkoBrana = document.querySelector('.code-box button')
 if (tlacitkoBrana) {
     tlacitkoBrana.addEventListener('click', sanctumSwitch);
     function sanctumSwitch() {
-        const vstup = document.querySelector('.code-box input').value
+        const vstup = document.querySelector('.code-box input').value.toUpperCase()
         if (vstup === "ANDROMEDA") {
             window.location.href = "sanctum.html";
         }
@@ -52,7 +52,15 @@ if (tlacitkoBrana) {
             }, 1500);
         }
     }
-}
+};
+
+// Tlačítko reagující na Enter
+const vstupniInput = document.querySelector('.code-box input');
+vstupniInput.addEventListener('keydown', (odemknout) => {
+    if (odemknout.key === 'Enter') {
+        tlacitkoBrana.click()
+    }
+});
 
 /* =========================================
     ČÁST 2: ZKOUŠKA (Quiz.html)

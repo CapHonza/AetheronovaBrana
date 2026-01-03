@@ -286,6 +286,9 @@ tlacitkaZaznamu.forEach(tlacitko => {
             ${data.pribeh}
             `;
 
+            // Scroll až nahoru u nového záznamu
+            document.getElementById('story-display').scrollTop = 0;
+
             // Texty pro spodní část (interactive-area)
             taskTitleElement.textContent = data.titulekZkousky;
             taskDescElement.innerHTML = data.popisZkousky;
@@ -299,7 +302,13 @@ tlacitkaZaznamu.forEach(tlacitko => {
             interactiveAreaElement.classList.remove('hidden');
         }
     })
-})
+});
+
+vstupInput.addEventListener('keydown', (odemknout) => {
+    if (odemknout.key === 'Enter') {
+        tlacitkoOdemknout.click()
+    }
+});
 
 /* =========================================
     ČÁST 4: KONTROLA ODPOVĚDI
