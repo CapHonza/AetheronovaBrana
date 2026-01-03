@@ -201,10 +201,6 @@ main {
     text-shadow: 0 0 10px var(--neon-blue);
 }
 
-.reading-area h3 {
-    font-size: 30px;
-}
-
 .reading-area p {
     line-height: 1.4;
     margin-bottom: 17px;
